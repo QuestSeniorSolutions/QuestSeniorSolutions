@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Page</title>
+    <!-- SweetAlert2 library -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Swal.fire({
+                title: "Form Submmited",
+                text: "Thank you for your submmission, we will get back with you as soon as possible",
+                icon: "success",
+                confirmButtonText: "Go Back"
+            }).then(() => {
+                window.location.href = "index.html"; // Redirect to index.html
+            });
+        });
+    </script>
+</body>
+</html>

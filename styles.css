@@ -1,0 +1,733 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+header, footer {
+    background-color: #f8f9fa;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from the link */
+    position: relative;
+}
+
+.logo-text {
+    margin-left: 10px; /* Adjust spacing between the logo and text */
+    font-size: 1.5em; /* Adjust font size */
+    color: #000; /* Black color */
+    position: relative;
+    font-weight: 400;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+
+.logo-text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37; /* Gold color */
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.logo-link:hover .logo-text::after {
+    width: 100%;
+}
+
+.logo-link:hover .logo-text {
+    color: #d4af37; /* Gold color */
+}
+
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    color: black;
+}
+
+.nav-item {
+    margin-right: 50px;
+    color: black;
+}
+
+.nav-link {
+    font-size: 20px;
+    position: relative;
+    color: #000000; /* Black color */
+    text-decoration: none;
+    transition: color 0.3s;
+    
+}
+
+.nav-link2{
+    font-size: 20px;
+    position: relative;
+    color: #000000; /* Black color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37; /* Gold color */
+    bottom: -2px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #d4af37; /* Gold color */
+    bottom: -2px;
+    right: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link2:hover::after {
+    width: 100%;
+}
+.nav-link:hover {
+    color: #d4af37; /* Gold color */
+}
+.nav-link2:hover {
+    color: #d4af37; /* Gold color */
+}
+/* Navbar Styles */
+.navbar {
+    background-color: #fff; /* White background */
+}
+
+.navbar .nav-link {
+    color: #000; /* Black color */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #c99d0f; /* Gold color */
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+}
+
+footer .nav-link {
+    color: #fff;
+}
+
+footer .nav-link:hover {
+    color: #ffc400; /* Gold color */
+}
+
+/* Header */
+header {
+    padding: 10px 20px;
+    border-bottom: 2px solid #fdc407; /* Gold color */
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Section */
+.jumbotron {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.jumbotron h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.jumbotron p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.jumbotron .btn-primary {
+    background-color: #d4af37;
+    border-color: #d4af37;
+}
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    height: 830px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.remo{
+    font-size: 1.05rem;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: zoomBackground 60s infinite alternate linear;
+}
+.card-body{
+    line-height: 30px;
+    font-size: 20px;
+    
+}
+.divider {
+    border-top: 1px solid #ccc; /* Divider style */
+    margin: 10px 0; /* Margin around the divider */
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-image: url('hero.jpg');
+        background-size: 100%;
+    }
+    25% {
+        background-image: url('2hero.jpg');
+        background-size: 110%;
+    }
+    50% {
+        background-image: url('3hero.jpg');
+        background-size: 120%;
+    }
+    75% {
+        background-image: url('4hero.jpg');
+        background-size: 130%;
+    }
+    100% {
+        background-image: url('hero.jpg');
+        background-size: 100%;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+}
+
+
+
+.rounded-image {
+    border-radius: 10px; /* Adjust the radius as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition */
+     /* Optional: Add a subtle box shadow */
+}
+
+.rounded-image:hover {
+    transform: scale(1.05); /* Scale image up on hover */
+     /* Optional: Increase box shadow on hover */
+}
+
+.about-link {
+    display: block;
+    overflow: hidden; /* Ensures the rounded corners are applied properly */
+}
+
+
+.hero-section .container h1,
+.hero-section .container .lead,
+.hero-section .container  {
+    position: relative;
+    z-index: 1;
+    color: #ecf8a7; /* Ensure text is readable against background */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .hero-section .container h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section .container .lead {
+        font-size: 1.25rem;
+    }
+    .hero-section .container .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+
+.jumbotron .btn-primary:hover {
+    background-color: #b8992d;
+    border-color: #daac08;
+}
+
+/* Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* About Us Section */
+#about-us {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+}
+
+#about-us h2 {
+    color: #343a40;
+}
+
+#about-us p {
+    color: #6c757d;
+}
+
+/* Services Section */
+
+/* Testimonials Section */
+#testimonials .col-md-4 {
+    margin-bottom: 30px;
+}
+
+#testimonials img {
+    border: 2px solid #d4af37;
+}
+
+#testimonials p {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Contact Us Section */
+#contact-us {
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+/* Contact Section Styling */
+.contact-section {
+    padding: 80px 0;
+    color: #000000;
+    font-size: 25px;
+}
+.carousel-item {
+    padding: 20px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    color: black; /* Set color to black */
+}
+
+.carousel-item p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.client-name {
+    font-style: italic;
+}
+
+.testimon{
+    background-color: #e4ca77;
+}
+
+.text-center{
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 8rem; /* Increase font size */
+    width: 50px; /* Adjust width */
+   
+}
+
+.testimonial-text{
+    font-size: 2rem;
+}
+
+.client-name{
+    font-size:1.5rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-size: 8rem; /* Adjust font size */
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    line-height: 30px; /* Center align the icon vertically */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust hover background color if needed */
+}
+
+
+.text-center {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+.contact-section h2 {
+    color: #000000;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+.contact-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.h-captcha{
+    display: block;
+}
+
+.contact-card h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-card ul li {
+    margin-bottom: 10px;
+}
+
+/* FontAwesome Icons */
+.fas {
+    margin-right: 10px;
+    width: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact-form, .contact-card {
+        background-color: rgba(255, 255, 255, 0.95);
+    }
+}
+
+
+
+/* Footer */
+footer {
+    padding: 20px 0;
+    border-top: 2px solid #dfae10; /* Gold color */
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+footer a img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .jumbotron h1 {
+        font-size: 2.5em;
+    }
+    .jumbotron p {
+        font-size: 1.3em;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2em;
+    }
+    .jumbotron p {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .jumbotron h1 {
+        font-size: 1.8em;
+    }
+    .jumbotron p {
+        font-size: 1em;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 420px) {
+    .jumbotron h1 {
+        font-size: 1.5em;
+    }
+    .jumbotron p {
+        font-size: 0.9em;
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 360px) {
+    .jumbotron h1 {
+        font-size: 1.3em;
+    }
+    .jumbotron p {
+        font-size: 0.8em;
+    }
+    section h2 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 320px) {
+    .jumbotron h1 {
+        font-size: 1.2em;
+    }
+    .jumbotron p {
+        font-size: 0.7em;
+    }
+    section h2 {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 1170px) {
+    .jumbotron h1 {
+        font-size: 2.5em;
+    }
+
+    .logo-text {
+        font-size: 1.15rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.3em;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    .nav-item {
+        font-size: 1.5rem;
+    }
+
+    .nav {
+        flex-direction: column-reverse;
+        width:max-content; /* Ensures nav items display horizontally */
+    }
+
+    
+    
+    .contact-card {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 1284px) {
+    .jumbotron h1 {
+        font-size: 2.8em;
+    }
+    .jumbotron p {
+        font-size: 1.4em;
+    }
+    section h2 {
+        font-size: 2.3em;
+    }
+    .nav-link {
+        font-size: .95em;
+    }
+    .contact-card {
+        font-size: 0.95em;
+    }
+}
+
+/* Tablets and smaller devices */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2em;
+    }
+    .jumbotron p {
+        font-size: 1.2em;
+    }
+    section h2 {
+        font-size: 1.8em;
+    }
+    .nav-link {
+        font-size: 0.8em;
+    }
+    .contact-card {
+        font-size: 0.85em;
+    }
+}
+
+/* Small devices and smaller */
+@media (max-width: 576px) {
+    .jumbotron h1 {
+        font-size: 1.8em;
+    }
+    .jumbotron p {
+        font-size: 1em;
+    }
+    section h2 {
+        font-size: 1.5em;
+    }
+    .nav-link {
+        font-size: 0.8em;
+    }
+    .contact-card {
+        font-size: 0.8em;
+    }
+}
+
+/* Extra small devices and smaller */
+@media (max-width: 420px) {
+    .jumbotron h1 {
+        font-size: 1.5em;
+    }
+    .jumbotron p {
+        font-size: 0.9em;
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+    .nav-link {
+        font-size: 0.75em;
+    }
+    .contact-card {
+        font-size: 0.75em;
+    }
+}
+
+/* Very small devices and smaller */
+@media (max-width: 360px) {
+    .jumbotron h1 {
+        font-size: 1.3em;
+    }
+    .jumbotron p {
+        font-size: 0.8em;
+    }
+    section h2 {
+        font-size: 1.2em;
+    }
+    .nav-link {
+        font-size: 0.7em;
+    }
+    .contact-card {
+        font-size: 0.7em;
+    }
+}
+
+/* Smallest devices */
+@media (max-width: 320px) {
+    .jumbotron h1 {
+        font-size: 1.2em;
+    }
+    .jumbotron p {
+        font-size: 0.7em;
+    }
+    section h2 {
+        font-size: 1em;
+    }
+    .nav-link {
+        font-size: 0.65em;
+    }
+    .contact-card {
+        font-size: 0.65em;
+    }
+}
